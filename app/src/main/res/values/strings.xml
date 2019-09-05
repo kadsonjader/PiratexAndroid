@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Piratex</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_cadastro">Cadastrar uma conta</string>
+    <string name="title_login">Acessar minha conta</string>
+    <string name="title_activity_passageiro">PassageiroActivity</string>
+</resources>

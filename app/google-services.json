@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "502185096092",
+    "firebase_url": "https://piratex-1565543606709.firebaseio.com",
+    "project_id": "piratex-1565543606709",
+    "storage_bucket": "piratex-1565543606709.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:502185096092:android:a967b98119b40ffd",
+        "android_client_info": {
+          "package_name": "com.android.piratex"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "502185096092-ki6dlbstuu57escap0jbgg3mhfpcla3u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.android.piratex",
+            "certificate_hash": "c2fe17098fdd9a7181b2e2f7ab9d84787f7988ed"
+          }
+        },
+        {
+          "client_id": "502185096092-aj0c6hs1c36if8i3t1bc3fr2ihtudpm9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqo4i8JhFQoKwPyByiOHXO6yk06cZR9Xw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "502185096092-aj0c6hs1c36if8i3t1bc3fr2ihtudpm9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
