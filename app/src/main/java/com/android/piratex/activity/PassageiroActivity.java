@@ -12,7 +12,10 @@ import android.location.LocationManager;
 import android.os.Bundle;
 
 import com.android.piratex.config.ConfiguraçãoFirebase;
+import com.android.piratex.helper.UsuarioFirebase;
 import com.android.piratex.model.Destino;
+import com.android.piratex.model.Requisicao;
+import com.android.piratex.model.Usuario;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -20,9 +23,8 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -30,13 +32,22 @@ import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.android.piratex.R;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
 
@@ -47,13 +58,65 @@ public class PassageiroActivity extends AppCompatActivity implements OnMapReadyC
     private LocationManager locationManager;
     private LocationListener locationListener;
     private EditText editDestino;
+    private LatLng localPassageiro;
+    private LinearLayout linearLayoutDestino;
+    private Button buttonChamarPiratex;
+    private boolean piratexChamado = false;
+    private DatabaseReference firebaseRef;
+    private Requisicao requisicao;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_passageiro);
 
+        firebaseRef = ConfiguraçãoFirebase.getFirebaseDatabase();
+
         inicializarComponentes();
+
+        verificaStatusRequisicao();
+    }
+
+    private void verificaStatusRequisicao(){
+
+        Usuario usuarioLogado = UsuarioFirebase.getDadosUsuarioLogado();
+        DatabaseReference requisicoes = firebaseRef.child("requisicoes");
+        Query requisicaoPesquisa = requisicoes.orderByChild("passageiro/id")
+                .equalTo( usuarioLogado.getId() );
+
+        requisicaoPesquisa.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+
+                List<Requisicao> lista = new ArrayList<>();
+                for( DataSnapshot ds: dataSnapshot.getChildren() ){
+                    lista.add( ds.getValue( Requisicao.class ) );
+                }
+
+                Collections.reverse(lista);
+                if(lista !=null && lista.size()>0) {
+                    requisicao = lista.get(0);
+
+                    switch (requisicao.getStatus()){
+                        case Requisicao.STATUS_AGUARDANDO :
+                            linearLayoutDestino.setVisibility( View.GONE );
+                            buttonChamarPiratex.setText("Cancelar Piratex");
+                            piratexChamado = true;
+                            break;
+
+                    }
+
+                }
+
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
     }
 
     /**
@@ -74,46 +137,69 @@ public class PassageiroActivity extends AppCompatActivity implements OnMapReadyC
     }
 
     public void chamarPiratex(View view){
-        String destino = editDestino.getText().toString();
-        if(!destino.equals("")|| destino != null){
-            Address addressDestino = recuperarEndereco(destino);
-            if(addressDestino != null){
-                Destino destino1 = new Destino();
-                destino1.setCidade(addressDestino.getAdminArea());
-                destino1.setCep(addressDestino.getPostalCode());
-                destino1.setBairro(addressDestino.getSubLocality());
-                destino1.setRua(addressDestino.getThoroughfare());
-                destino1.setNumero(addressDestino.getFeatureName());
-                destino1.setLatitude(String.valueOf(addressDestino.getLatitude()));
-                destino1.setLongitude(String.valueOf(addressDestino.getLongitude()));
 
-                StringBuilder mensagem = new StringBuilder();
-                mensagem.append("Cidade: "+ destino1.getCidade());
-                mensagem.append("\nRua: "+ destino1.getRua());
-                mensagem.append("\nBairro: "+ destino1.getBairro());
-                mensagem.append("\nNúmero: "+ destino1.getNumero());
-                mensagem.append("\nCep: "+ destino1.getCep());
+        if(!piratexChamado){//Piratex nao foi chamado
+            String destino = editDestino.getText().toString();
+            if(!destino.equals("")|| destino != null){
+                Address addressDestino = recuperarEndereco(destino);
+                if(addressDestino != null){
+                    final Destino destino1 = new Destino();
+                    destino1.setCidade(addressDestino.getAdminArea());
+                    destino1.setCep(addressDestino.getPostalCode());
+                    destino1.setBairro(addressDestino.getSubLocality());
+                    destino1.setRua(addressDestino.getThoroughfare());
+                    destino1.setNumero(addressDestino.getFeatureName());
+                    destino1.setLatitude(String.valueOf(addressDestino.getLatitude()));
+                    destino1.setLongitude(String.valueOf(addressDestino.getLongitude()));
 
-                AlertDialog.Builder builder = new AlertDialog.Builder(this)
-                        .setTitle("Confirme seu endereço!")
-                        .setMessage(mensagem)
-                        .setPositiveButton("Confirmar", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialogInterface, int i) {
+                    StringBuilder mensagem = new StringBuilder();
+                    mensagem.append("Cidade: "+ destino1.getCidade());
+                    mensagem.append("\nRua: "+ destino1.getRua());
+                    mensagem.append("\nBairro: "+ destino1.getBairro());
+                    mensagem.append("\nNúmero: "+ destino1.getNumero());
+                    mensagem.append("\nCep: "+ destino1.getCep());
 
-                            }
-                        }).setNegativeButton("cancelar", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialogInterface, int i) {
+                    AlertDialog.Builder builder = new AlertDialog.Builder(this)
+                            .setTitle("Confirme seu endereço!")
+                            .setMessage(mensagem)
+                            .setPositiveButton("Confirmar", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+                                    salvarRequisição(destino1);
+                                    piratexChamado = true;
+                                }
+                            }).setNegativeButton("cancelar", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
 
-                            }
-                        });
-                AlertDialog dialog = builder.create();
-                dialog.show();
+                                }
+                            });
+                    AlertDialog dialog = builder.create();
+                    dialog.show();
+                }
+            }else{
+                Toast.makeText(this,"Informe o endereço de destino!",Toast.LENGTH_SHORT).show();
             }
+
         }else{
-            Toast.makeText(this,"Informe o endereço de destino!",Toast.LENGTH_SHORT).show();
+            piratexChamado = false;
         }
+
+    }
+
+    private void salvarRequisição(Destino destino){
+        Requisicao requisicao = new Requisicao();
+        requisicao.setDestino(destino);
+
+        Usuario usuarioPassageiro = UsuarioFirebase.getDadosUsuarioLogado();
+        usuarioPassageiro.setLatitude(String.valueOf(localPassageiro.latitude));
+        usuarioPassageiro.setLongitude(String.valueOf(localPassageiro.longitude));
+        requisicao.setPassageiro(usuarioPassageiro);
+        requisicao.setStatus(Requisicao.STATUS_AGUARDANDO);
+        requisicao.salvar();
+
+        linearLayoutDestino.setVisibility(View.GONE);
+        buttonChamarPiratex.setText("Cancelar Uber");
     }
 
     public Address recuperarEndereco(String endereco){
@@ -141,17 +227,17 @@ public class PassageiroActivity extends AppCompatActivity implements OnMapReadyC
                 //latitude e longitude do usuario
                 double latitude = location.getLatitude();
                 double longitude = location.getLongitude();
-                LatLng meuLocal = new LatLng(latitude, longitude);
+                localPassageiro = new LatLng(latitude, longitude);
 
                 mMap.clear();
                 mMap.addMarker(
                         new MarkerOptions()
-                                .position(meuLocal)
+                                .position(localPassageiro)
                                 .title("Seu Local")
                                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.usuario))
                 );
                 mMap.moveCamera(
-                        CameraUpdateFactory.newLatLngZoom(meuLocal, 19)
+                        CameraUpdateFactory.newLatLngZoom(localPassageiro, 19)
                 );
             }
 
@@ -205,6 +291,8 @@ public class PassageiroActivity extends AppCompatActivity implements OnMapReadyC
         setSupportActionBar(toolbar);
 
         editDestino = findViewById(R.id.editDestino);
+        linearLayoutDestino = findViewById(R.id.linearLayoutDestino);
+        buttonChamarPiratex = findViewById(R.id.buttonChamarPiratex);
 
         //Configurações Iniciais
         autenticacao = ConfiguraçãoFirebase.getFirebaseAutenticacao();

@@ -25,6 +25,7 @@
         layout="@layout/content_passageiro" />
 
     <LinearLayout
+        android:id="@+id/linearLayoutDestino"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
@@ -67,7 +68,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/buttonChamarPiratex"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_gravity="bottom"
