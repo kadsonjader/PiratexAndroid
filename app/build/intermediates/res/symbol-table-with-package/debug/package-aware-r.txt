@@ -1236,6 +1236,7 @@ id pin
 id progress_circular
 id progress_horizontal
 id radio
+id recyclerRequisicoes
 id right
 id right_icon
 id right_side
@@ -1295,6 +1296,9 @@ id textInputLayout4
 id textInputLayout5
 id textInputLayout8
 id textInputLayout9
+id textRequisicaoDistancia
+id textRequisicaoNome
+id textResultado
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
@@ -1380,6 +1384,7 @@ layout activity_login
 layout activity_main
 layout activity_passageiro
 layout activity_requisicoes
+layout adapter_requisicoes
 layout content_passageiro
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog

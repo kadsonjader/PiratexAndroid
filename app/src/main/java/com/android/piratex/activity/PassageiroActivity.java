@@ -71,8 +71,6 @@ public class PassageiroActivity extends AppCompatActivity implements OnMapReadyC
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_passageiro);
 
-        firebaseRef = ConfiguraçãoFirebase.getFirebaseDatabase();
-
         inicializarComponentes();
 
         verificaStatusRequisicao();
@@ -296,6 +294,7 @@ public class PassageiroActivity extends AppCompatActivity implements OnMapReadyC
 
         //Configurações Iniciais
         autenticacao = ConfiguraçãoFirebase.getFirebaseAutenticacao();
+        firebaseRef = ConfiguraçãoFirebase.getFirebaseDatabase();
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
