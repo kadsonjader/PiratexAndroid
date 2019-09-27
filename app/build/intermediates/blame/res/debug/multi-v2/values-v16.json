@@ -1,10 +1,20 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\Piratex\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
+            "outputFile": "/Users/renanravelli/Documents/workspace/PiratexAndroid/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\kadso\\.gradle\\caches\\transforms-2\\files-2.1\\507a2d319ae232a4c602064e7894d411\\res\\values-v16\\values-v16.xml",
+                    "source": "/Users/renanravelli/.gradle/caches/transforms-2/files-2.1/94b549a873afb9df65451cfc7a4a3684/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
+                    }
+                },
+                {
+                    "source": "/Users/renanravelli/.gradle/caches/transforms-2/files-2.1/373fcbfa9048945614e673be5ce3dc22/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -20,16 +30,6 @@
                         "endLines": "6",
                         "endColumns": "12",
                         "endOffsets": "289"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\kadso\\.gradle\\caches\\transforms-2\\files-2.1\\bea28818df73cc9d82210e3b544f6bf2\\res\\values-v16\\values-v16.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "65",
-                        "endOffsets": "116"
                     }
                 }
             ]

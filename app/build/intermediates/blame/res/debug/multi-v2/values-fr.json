@@ -1,44 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\Piratex\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-fr\\values-fr.xml",
+            "outputFile": "/Users/renanravelli/Documents/workspace/PiratexAndroid/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-fr/values-fr.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\kadso\\.gradle\\caches\\transforms-2\\files-2.1\\276ddaff936d38754bb32a5b8b746faf\\res\\values-fr\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "247",
-                        "endColumns": "223",
-                        "endOffsets": "470"
-                    },
-                    "to": {
-                        "startLines": "37",
-                        "startColumns": "4",
-                        "startOffsets": "4080",
-                        "endColumns": "223",
-                        "endOffsets": "4299"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\kadso\\.gradle\\caches\\transforms-2\\files-2.1\\6bd79f37adaffd8e77b97a7f3a8ab0e6\\res\\values-fr\\values.xml",
-                    "from": {
-                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
-                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
-                        "startOffsets": "245,349,561,689,796,1026,1157,1304,1442,1679,1789,2005,2139,2358,2563,2662,2755",
-                        "endColumns": "103,211,127,106,229,130,146,137,236,109,215,133,218,204,98,92,108",
-                        "endOffsets": "348,560,688,795,1025,1156,1303,1441,1678,1788,2004,2138,2357,2562,2661,2754,2863"
-                    },
-                    "to": {
-                        "startLines": "29,30,31,32,33,34,35,36,38,39,40,41,42,43,44,45,46",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "2859,2967,3179,3311,3422,3652,3787,3938,4304,4541,4655,4871,5009,5228,5437,5540,5637",
-                        "endColumns": "107,211,131,110,229,134,150,141,236,113,215,137,218,208,102,96,112",
-                        "endOffsets": "2962,3174,3306,3417,3647,3782,3933,4075,4536,4650,4866,5004,5223,5432,5535,5632,5745"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\kadso\\.gradle\\caches\\transforms-2\\files-2.1\\507a2d319ae232a4c602064e7894d411\\res\\values-fr\\values-fr.xml",
+                    "source": "/Users/renanravelli/.gradle/caches/transforms-2/files-2.1/373fcbfa9048945614e673be5ce3dc22/res/values-fr/values-fr.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -55,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\kadso\\.gradle\\caches\\transforms-2\\files-2.1\\bea28818df73cc9d82210e3b544f6bf2\\res\\values-fr\\values-fr.xml",
+                    "source": "/Users/renanravelli/.gradle/caches/transforms-2/files-2.1/94b549a873afb9df65451cfc7a4a3684/res/values-fr/values-fr.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -69,6 +35,40 @@
                         "startOffsets": "5836",
                         "endColumns": "100",
                         "endOffsets": "5932"
+                    }
+                },
+                {
+                    "source": "/Users/renanravelli/.gradle/caches/transforms-2/files-2.1/5bab9c7d933f078b3eb0031bb8c87c0d/res/values-fr/values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
+                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+                        "startOffsets": "245,349,561,689,796,1026,1157,1304,1442,1679,1789,2005,2139,2358,2563,2662,2755",
+                        "endColumns": "103,211,127,106,229,130,146,137,236,109,215,133,218,204,98,92,108",
+                        "endOffsets": "348,560,688,795,1025,1156,1303,1441,1678,1788,2004,2138,2357,2562,2661,2754,2863"
+                    },
+                    "to": {
+                        "startLines": "29,30,31,32,33,34,35,36,38,39,40,41,42,43,44,45,46",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "2859,2967,3179,3311,3422,3652,3787,3938,4304,4541,4655,4871,5009,5228,5437,5540,5637",
+                        "endColumns": "107,211,131,110,229,134,150,141,236,113,215,137,218,208,102,96,112",
+                        "endOffsets": "2962,3174,3306,3417,3647,3782,3933,4075,4536,4650,4866,5004,5223,5432,5535,5632,5745"
+                    }
+                },
+                {
+                    "source": "/Users/renanravelli/.gradle/caches/transforms-2/files-2.1/58728d45d5c13b4d34f21b18e2b4c028/res/values-fr/values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "247",
+                        "endColumns": "223",
+                        "endOffsets": "470"
+                    },
+                    "to": {
+                        "startLines": "37",
+                        "startColumns": "4",
+                        "startOffsets": "4080",
+                        "endColumns": "223",
+                        "endOffsets": "4299"
                     }
                 }
             ]
