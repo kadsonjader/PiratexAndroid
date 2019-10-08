@@ -1133,6 +1133,7 @@ id button
 id button2
 id button4
 id button5
+id buttonAceitarCorrida
 id buttonChamarPiratex
 id buttonPanel
 id center
@@ -1380,11 +1381,13 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_cadastro
+layout activity_corrida
 layout activity_login
 layout activity_main
 layout activity_passageiro
 layout activity_requisicoes
 layout adapter_requisicoes
+layout content_corrida
 layout content_passageiro
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -1497,6 +1500,7 @@ string path_password_strike_through
 string project_id
 string search_menu_title
 string status_bar_notification_info_overflow
+string title_activity_corrida
 string title_activity_maps
 string title_activity_passageiro
 string title_cadastro

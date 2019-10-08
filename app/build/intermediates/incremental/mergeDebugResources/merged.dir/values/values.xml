@@ -618,6 +618,7 @@
     <string name="project_id" translatable="false">piratex-1565543606709</string>
     <string name="search_menu_title">Search</string>
     <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="title_activity_corrida">CorridaActivity</string>
     <string name="title_activity_maps">Map</string>
     <string name="title_activity_passageiro">PassageiroActivity</string>
     <string name="title_cadastro">Cadastrar uma conta</string>

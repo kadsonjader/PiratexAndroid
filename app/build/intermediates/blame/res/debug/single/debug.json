@@ -1368,6 +1368,10 @@
         "source": "C:\\Users\\kadso\\.gradle\\caches\\transforms-2\\files-2.1\\507a2d319ae232a4c602064e7894d411\\res\\layout\\abc_action_menu_layout.xml"
     },
     {
+        "merged": "E:\\Piratex\\app\\build\\intermediates\\res\\merged\\debug\\layout_content_corrida.xml.flat",
+        "source": "E:\\Piratex\\app\\src\\main\\res\\layout\\content_corrida.xml"
+    },
+    {
         "merged": "E:\\Piratex\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_tint_seek_thumb.xml.flat",
         "source": "C:\\Users\\kadso\\.gradle\\caches\\transforms-2\\files-2.1\\507a2d319ae232a4c602064e7894d411\\res\\color\\abc_tint_seek_thumb.xml"
     },
@@ -1878,6 +1882,10 @@
     {
         "merged": "E:\\Piratex\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_part_time.xml.flat",
         "source": "C:\\Users\\kadso\\.gradle\\caches\\transforms-2\\files-2.1\\bea28818df73cc9d82210e3b544f6bf2\\res\\layout\\notification_template_part_time.xml"
+    },
+    {
+        "merged": "E:\\Piratex\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_corrida.xml.flat",
+        "source": "E:\\Piratex\\app\\src\\main\\res\\layout\\activity_corrida.xml"
     },
     {
         "merged": "E:\\Piratex\\app\\build\\intermediates\\res\\merged\\debug\\drawable_design_password_eye.xml.flat",

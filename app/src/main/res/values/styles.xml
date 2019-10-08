@@ -7,8 +7,8 @@
         <item name="colorPrimaryDark">#000000</item>
         <item name="colorAccent">#1C5D59</item>
     </style>
-    
-    <style name="botaoPadrao"  parent="Theme.AppCompat.Light">
+
+    <style name="botaoPadrao" parent="Theme.AppCompat.Light">
         <item name="colorControlHighlight">@color/colorPrimary</item>
         <item name="colorButtonNormal">@color/colorPrimaryDark</item>
         <item name="android:textColor">@android:color/white</item>
