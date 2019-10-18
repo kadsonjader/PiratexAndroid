@@ -114,6 +114,9 @@ public class RequisicoesActivity extends AppCompatActivity {
                 String latitude = String.valueOf(location.getLatitude());
                 String longitude = String.valueOf(location.getLongitude());
 
+                //atualizar GeoFire
+                UsuarioFirebase.atualizarDadosLocalizacao(location.getLatitude(),location.getLongitude());
+
                 if( !latitude.isEmpty() && !longitude.isEmpty() ){
                     motorista.setLatitude(latitude);
                     motorista.setLongitude(longitude);

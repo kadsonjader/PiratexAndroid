@@ -8,6 +8,8 @@ import com.android.piratex.activity.PassageiroActivity;
 import com.android.piratex.activity.RequisicoesActivity;
 import com.android.piratex.config.ConfiguracaoFirebase;
 import com.android.piratex.model.Usuario;
+import com.firebase.geofire.GeoFire;
+import com.firebase.geofire.GeoLocation;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;

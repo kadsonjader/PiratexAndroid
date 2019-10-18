@@ -132,6 +132,7 @@ public class CorridaActivity extends AppCompatActivity
         //Exibe marcador do motorista
         adicionaMarcadorMotorista(localMotorista, motorista.getNome() );
 
+
         mMap.moveCamera(
                 CameraUpdateFactory.newLatLngZoom(localMotorista, 20)
         );
