@@ -4,6 +4,7 @@ import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
@@ -18,11 +19,17 @@ import com.android.piratex.config.ConfiguracaoFirebase;
 import com.android.piratex.helper.UsuarioFirebase;
 import com.android.piratex.model.Requisicao;
 import com.android.piratex.model.Usuario;
+import com.firebase.geofire.GeoFire;
+import com.firebase.geofire.GeoLocation;
+import com.firebase.geofire.GeoQuery;
+import com.firebase.geofire.GeoQueryEventListener;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.Circle;
+import com.google.android.gms.maps.model.CircleOptions;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.Marker;
@@ -132,7 +139,6 @@ public class CorridaActivity extends AppCompatActivity
         //Exibe marcador do motorista
         adicionaMarcadorMotorista(localMotorista, motorista.getNome() );
 
-
         mMap.moveCamera(
                 CameraUpdateFactory.newLatLngZoom(localMotorista, 20)
         );
@@ -150,6 +156,71 @@ public class CorridaActivity extends AppCompatActivity
 
         //Centralizar dois marcadores
         centralizarDoisMarcadores(marcadorMotorista, marcadorPassageiro);
+
+        //Inicia monitoramento do motorista / passageiro
+        iniciarMonitoramentoCorrida(passageiro, motorista);
+
+    }
+
+    private void iniciarMonitoramentoCorrida(Usuario p, Usuario m){
+
+        //Inicializar GeoFire
+        DatabaseReference localUsuario = ConfiguracaoFirebase.getFirebaseDatabase()
+                .child("local_usuario");
+        GeoFire geoFire = new GeoFire(localUsuario);
+
+        //Adiciona círculo no passageiro
+        final Circle circulo = mMap.addCircle(
+                new CircleOptions()
+                        .center( localPassageiro )
+                        .radius(50)//em metros
+                        .fillColor(Color.argb(90,255, 153,0))
+                        .strokeColor(Color.argb(190,255,152,0))
+        );
+
+        final GeoQuery geoQuery = geoFire.queryAtLocation(
+                new GeoLocation(localPassageiro.latitude, localPassageiro.longitude),
+                0.05//em km (0.05 50 metros)
+        );
+        geoQuery.addGeoQueryEventListener(new GeoQueryEventListener() {
+            @Override
+            public void onKeyEntered(String key, GeoLocation location) {
+
+                if( key.equals(motorista.getId()) ){
+                    //Log.d("onKeyEntered", "onKeyEntered: motorista está dentro da área!");
+
+                    //Altera status da requisicao
+                    requisicao.setStatus(Requisicao.STATUS_VIAGEM);
+                    requisicao.atualizarStatus();
+
+                    //Remove listener
+                    geoQuery.removeAllListeners();
+                    circulo.remove();
+
+                }
+
+            }
+
+            @Override
+            public void onKeyExited(String key) {
+
+            }
+
+            @Override
+            public void onKeyMoved(String key, GeoLocation location) {
+
+            }
+
+            @Override
+            public void onGeoQueryReady() {
+
+            }
+
+            @Override
+            public void onGeoQueryError(DatabaseError error) {
+
+            }
+        });
 
     }
 
@@ -213,13 +284,13 @@ public class CorridaActivity extends AppCompatActivity
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
-        recuperarLocalizaUsuario();
+        //Recuperar localizacao do usuário
+        recuperarLocalizacaoUsuario();
 
     }
 
+    private void recuperarLocalizacaoUsuario() {
 
-    @RequiresApi(api = Build.VERSION_CODES.M)
-    private void recuperarLocalizaUsuario() {
         locationManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
 
         locationListener = new LocationListener() {
