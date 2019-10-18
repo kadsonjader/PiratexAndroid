@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:2:1-55:12
-INJECTED from E:\Piratex\app\src\main\AndroidManifest.xml:2:1-55:12
-INJECTED from E:\Piratex\app\src\main\AndroidManifest.xml:2:1-55:12
-INJECTED from E:\Piratex\app\src\main\AndroidManifest.xml:2:1-55:12
+ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:1:1-66:12
+INJECTED from E:\Piratex\app\src\main\AndroidManifest.xml:1:1-66:12
+INJECTED from E:\Piratex\app\src\main\AndroidManifest.xml:1:1-66:12
+INJECTED from E:\Piratex\app\src\main\AndroidManifest.xml:1:1-66:12
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\kadso\.gradle\caches\transforms-2\files-2.1\c2733f22172056013edd0071213c8457\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat:1.0.2] C:\Users\kadso\.gradle\caches\transforms-2\files-2.1\507a2d319ae232a4c602064e7894d411\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\kadso\.gradle\caches\transforms-2\files-2.1\207fa06d24d818f37c757160525d715a\AndroidManifest.xml:17:1-38:12
@@ -57,47 +57,33 @@ MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\kadso\.gradle
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\kadso\.gradle\caches\transforms-2\files-2.1\3245d8c3bd0f94cd28815220ed91e556\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\kadso\.gradle\caches\transforms-2\files-2.1\49c93d6ca4033c50738b9672fcdfc32c\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-database-collection:16.0.1] C:\Users\kadso\.gradle\caches\transforms-2\files-2.1\6bf9b5769bcebf75c4940ac9fb719f77\AndroidManifest.xml:2:1-7:12
-INJECTED from E:\Piratex\app\src\main\AndroidManifest.xml:2:1-55:12
-INJECTED from E:\Piratex\app\src\main\AndroidManifest.xml:2:1-55:12
-INJECTED from E:\Piratex\app\src\main\AndroidManifest.xml:2:1-55:12
+INJECTED from E:\Piratex\app\src\main\AndroidManifest.xml:1:1-66:12
+INJECTED from E:\Piratex\app\src\main\AndroidManifest.xml:1:1-66:12
+INJECTED from E:\Piratex\app\src\main\AndroidManifest.xml:1:1-66:12
 	package
-		ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:3:5-34
+		ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:2:5-34
 		INJECTED from E:\Piratex\app\src\main\AndroidManifest.xml
 		INJECTED from E:\Piratex\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from E:\Piratex\app\src\main\AndroidManifest.xml
-		ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:2:1-55:12
+		ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:1:1-66:12
 		INJECTED from E:\Piratex\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from E:\Piratex\app\src\main\AndroidManifest.xml
-		ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:2:1-55:12
+		ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:1:1-66:12
 		INJECTED from E:\Piratex\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:2:11-69
-uses-permission#android.permission.INTERNET
-ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:9:5-67
-MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\kadso\.gradle\caches\transforms-2\files-2.1\207fa06d24d818f37c757160525d715a\AndroidManifest.xml:24:5-67
-MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\kadso\.gradle\caches\transforms-2\files-2.1\207fa06d24d818f37c757160525d715a\AndroidManifest.xml:24:5-67
-MERGED from [com.google.firebase:firebase-database:16.0.6] C:\Users\kadso\.gradle\caches\transforms-2\files-2.1\557f9bad9b727e08a1b20dce6bd7cd5f\AndroidManifest.xml:25:5-67
-MERGED from [com.google.firebase:firebase-database:16.0.6] C:\Users\kadso\.gradle\caches\transforms-2\files-2.1\557f9bad9b727e08a1b20dce6bd7cd5f\AndroidManifest.xml:25:5-67
-MERGED from [com.google.firebase:firebase-storage:16.0.5] C:\Users\kadso\.gradle\caches\transforms-2\files-2.1\4b98e575ce61a4894fd35f0dfded1d10\AndroidManifest.xml:24:5-67
-MERGED from [com.google.firebase:firebase-storage:16.0.5] C:\Users\kadso\.gradle\caches\transforms-2\files-2.1\4b98e575ce61a4894fd35f0dfded1d10\AndroidManifest.xml:24:5-67
-MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.5] C:\Users\kadso\.gradle\caches\transforms-2\files-2.1\59bed0f279547752c3c66dfb38fb14d7\AndroidManifest.xml:22:5-67
-MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.5] C:\Users\kadso\.gradle\caches\transforms-2\files-2.1\59bed0f279547752c3c66dfb38fb14d7\AndroidManifest.xml:22:5-67
-MERGED from [com.google.firebase:firebase-analytics:16.3.0] C:\Users\kadso\.gradle\caches\transforms-2\files-2.1\deec5ea4419dae4fce2ee43c7fc43bf1\AndroidManifest.xml:23:5-67
-MERGED from [com.google.firebase:firebase-analytics:16.3.0] C:\Users\kadso\.gradle\caches\transforms-2\files-2.1\deec5ea4419dae4fce2ee43c7fc43bf1\AndroidManifest.xml:23:5-67
-MERGED from [com.google.firebase:firebase-analytics-impl:16.3.0] C:\Users\kadso\.gradle\caches\transforms-2\files-2.1\4b4ef5645c572cfd41ba49d4c7fcf22f\AndroidManifest.xml:23:5-67
-MERGED from [com.google.firebase:firebase-analytics-impl:16.3.0] C:\Users\kadso\.gradle\caches\transforms-2\files-2.1\4b4ef5645c572cfd41ba49d4c7fcf22f\AndroidManifest.xml:23:5-67
-MERGED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\kadso\.gradle\caches\transforms-2\files-2.1\740fa38196cb4372870179e780c03329\AndroidManifest.xml:23:5-67
-MERGED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\kadso\.gradle\caches\transforms-2\files-2.1\740fa38196cb4372870179e780c03329\AndroidManifest.xml:23:5-67
+		ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:1:11-69
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:8:5-81
 	android:name
-		ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:9:22-64
+		ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:8:22-78
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:10:5-79
+ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:9:5-79
 	android:name
-		ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:10:22-76
+		ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:9:22-76
 application
-ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:12:5-53:19
+ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:11:5-61:19
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\kadso\.gradle\caches\transforms-2\files-2.1\c2733f22172056013edd0071213c8457\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\kadso\.gradle\caches\transforms-2\files-2.1\c2733f22172056013edd0071213c8457\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\kadso\.gradle\caches\transforms-2\files-2.1\207fa06d24d818f37c757160525d715a\AndroidManifest.xml:30:5-36:19
@@ -145,67 +131,105 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\ka
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.0.1] C:\Users\kadso\.gradle\caches\transforms-2\files-2.1\bea28818df73cc9d82210e3b544f6bf2\AndroidManifest.xml:22:18-86
 	android:supportsRtl
-		ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:17:9-35
+		ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:16:9-35
 	android:label
-		ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:15:9-41
+		ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:14:9-41
 	android:roundIcon
-		ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:16:9-54
+		ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:15:9-54
 	android:icon
-		ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:14:9-43
+		ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:13:9-43
 	android:allowBackup
-		ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:13:9-35
+		ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:12:9-35
 	android:theme
-		ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:18:9-40
-activity#com.android.piratex.activity.PassageiroActivity
-ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:19:9-22:68
+		ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:17:9-40
+activity#com.android.piratex.activity.CorridaActivity
+ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:18:9-26:20
+	android:parentActivityName
+		ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:21:13-71
 	android:label
-		ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:21:13-62
+		ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:20:13-59
 	android:theme
 		ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:22:13-56
 	android:name
-		ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:20:13-56
-activity#com.android.piratex.activity.RequisicoesActivity
-ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:23:9-66
-	android:name
-		ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:23:19-63
-activity#com.android.piratex.activity.CadastroActivity
-ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:24:9-27:67
-	android:parentActivityName
-		ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:27:13-64
-	android:label
-		ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:26:13-51
-	android:name
-		ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:25:13-54
-activity#com.android.piratex.activity.LoginActivity
-ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:28:9-31:67
-	android:parentActivityName
-		ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:31:13-64
-	android:label
-		ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:30:13-48
-	android:name
-		ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:29:13-51
-meta-data#com.google.android.geo.API_KEY
-ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:40:9-42:55
+		ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:19:13-53
+meta-data#android.support.PARENT_ACTIVITY
+ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:23:13-25:84
 	android:value
-		ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:42:13-52
+		ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:25:17-81
 	android:name
-		ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:41:13-58
-activity#com.android.piratex.activity.MainActivity
-ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:44:9-52:20
+		ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:24:17-63
+activity#com.android.piratex.activity.PassageiroActivity
+ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:27:9-30:59
 	android:label
-		ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:46:13-45
+		ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:29:13-62
+	android:theme
+		ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:30:13-56
 	android:name
-		ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:45:13-50
-intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:47:13-51:29
+		ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:28:13-56
+activity#com.android.piratex.activity.RequisicoesActivity
+ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:31:9-66
+	android:name
+		ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:31:19-63
+activity#com.android.piratex.activity.CadastroActivity
+ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:32:9-35:67
+	android:parentActivityName
+		ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:35:13-64
+	android:label
+		ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:34:13-51
+	android:name
+		ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:33:13-54
+activity#com.android.piratex.activity.LoginActivity
+ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:36:9-39:67
+	android:parentActivityName
+		ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:39:13-64
+	android:label
+		ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:38:13-48
+	android:name
+		ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:37:13-51
+activity#com.android.piratex.activity.MainActivity
+ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:48:9-56:20
+	android:label
+		ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:50:13-45
+	android:name
+		ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:49:13-50
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.DEFAULT+category:name:android.intent.category.LAUNCHER
+ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:51:13-55:29
 action#android.intent.action.MAIN
-ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:48:17-69
+ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:52:17-69
 	android:name
-		ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:48:25-66
+		ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:52:25-66
+category#android.intent.category.DEFAULT
+ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:53:17-76
+	android:name
+		ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:53:27-73
 category#android.intent.category.LAUNCHER
-ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:50:17-77
+ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:54:17-77
 	android:name
-		ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:50:27-74
+		ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:54:27-74
+meta-data#com.google.android.geo.API_KEY
+ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:58:9-60:55
+	android:value
+		ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:60:13-52
+	android:name
+		ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:59:13-58
+uses-permission#android.permission.INTERNET
+ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:64:5-67
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\kadso\.gradle\caches\transforms-2\files-2.1\207fa06d24d818f37c757160525d715a\AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\kadso\.gradle\caches\transforms-2\files-2.1\207fa06d24d818f37c757160525d715a\AndroidManifest.xml:24:5-67
+MERGED from [com.google.firebase:firebase-database:16.0.6] C:\Users\kadso\.gradle\caches\transforms-2\files-2.1\557f9bad9b727e08a1b20dce6bd7cd5f\AndroidManifest.xml:25:5-67
+MERGED from [com.google.firebase:firebase-database:16.0.6] C:\Users\kadso\.gradle\caches\transforms-2\files-2.1\557f9bad9b727e08a1b20dce6bd7cd5f\AndroidManifest.xml:25:5-67
+MERGED from [com.google.firebase:firebase-storage:16.0.5] C:\Users\kadso\.gradle\caches\transforms-2\files-2.1\4b98e575ce61a4894fd35f0dfded1d10\AndroidManifest.xml:24:5-67
+MERGED from [com.google.firebase:firebase-storage:16.0.5] C:\Users\kadso\.gradle\caches\transforms-2\files-2.1\4b98e575ce61a4894fd35f0dfded1d10\AndroidManifest.xml:24:5-67
+MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.5] C:\Users\kadso\.gradle\caches\transforms-2\files-2.1\59bed0f279547752c3c66dfb38fb14d7\AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.5] C:\Users\kadso\.gradle\caches\transforms-2\files-2.1\59bed0f279547752c3c66dfb38fb14d7\AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-analytics:16.3.0] C:\Users\kadso\.gradle\caches\transforms-2\files-2.1\deec5ea4419dae4fce2ee43c7fc43bf1\AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-analytics:16.3.0] C:\Users\kadso\.gradle\caches\transforms-2\files-2.1\deec5ea4419dae4fce2ee43c7fc43bf1\AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-analytics-impl:16.3.0] C:\Users\kadso\.gradle\caches\transforms-2\files-2.1\4b4ef5645c572cfd41ba49d4c7fcf22f\AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-analytics-impl:16.3.0] C:\Users\kadso\.gradle\caches\transforms-2\files-2.1\4b4ef5645c572cfd41ba49d4c7fcf22f\AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\kadso\.gradle\caches\transforms-2\files-2.1\740fa38196cb4372870179e780c03329\AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\kadso\.gradle\caches\transforms-2\files-2.1\740fa38196cb4372870179e780c03329\AndroidManifest.xml:23:5-67
+	android:name
+		ADDED from E:\Piratex\app\src\main\AndroidManifest.xml:64:22-64
 uses-sdk
 INJECTED from E:\Piratex\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from E:\Piratex\app\src\main\AndroidManifest.xml

@@ -20,7 +20,7 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <include layout="@layout/content_passageiro"/>
+    <include layout="@layout/content_passageiro" />
 
     <Button
         android:id="@+id/buttonAceitarCorrida"
