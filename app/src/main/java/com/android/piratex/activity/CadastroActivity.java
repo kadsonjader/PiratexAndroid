@@ -10,7 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.piratex.R;
-import com.android.piratex.config.ConfiguraçãoFirebase;
+import com.android.piratex.config.ConfiguracaoFirebase;
 import com.android.piratex.helper.UsuarioFirebase;
 import com.android.piratex.model.Usuario;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -76,7 +76,7 @@ public class CadastroActivity extends AppCompatActivity {
     }
 
     public void cadastrarUsuario(final Usuario usuario){
-        autenticacao = ConfiguraçãoFirebase.getFirebaseAutenticacao();
+        autenticacao = ConfiguracaoFirebase.getFirebaseAutenticacao();
         autenticacao.createUserWithEmailAndPassword(
                 usuario.getEmail(),
                 usuario.getSenha()

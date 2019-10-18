@@ -8,7 +8,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.piratex.R;
-import com.android.piratex.config.ConfiguraçãoFirebase;
+import com.android.piratex.config.ConfiguracaoFirebase;
 import com.android.piratex.helper.UsuarioFirebase;
 import com.android.piratex.model.Usuario;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -16,7 +16,6 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseAuthEmailException;
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.FirebaseAuthInvalidUserException;
 
@@ -56,7 +55,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void logarUsuario(Usuario usuario){
-        autenticao = ConfiguraçãoFirebase.getFirebaseAutenticacao();
+        autenticao = ConfiguracaoFirebase.getFirebaseAutenticacao();
         autenticao.signInWithEmailAndPassword(
                    usuario.getEmail(), usuario.getSenha()
         ).addOnCompleteListener(new OnCompleteListener<AuthResult>() {

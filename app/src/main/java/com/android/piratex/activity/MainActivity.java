@@ -12,10 +12,8 @@ import android.view.View;
 import androidx.annotation.NonNull;
 
 import com.android.piratex.R;
-import com.android.piratex.config.ConfiguraçãoFirebase;
 import com.android.piratex.helper.Permissoes;
 import com.android.piratex.helper.UsuarioFirebase;
-import com.android.piratex.model.Usuario;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends Activity {
@@ -30,7 +28,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //autenticacao = ConfiguraçãoFirebase.getFirebaseAutenticacao();
+        //autenticacao = ConfiguracaoFirebase.getFirebaseAutenticacao();
         //autenticacao.signOut();
 
         //validar Permissões

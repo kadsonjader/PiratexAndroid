@@ -11,7 +11,7 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
 
-import com.android.piratex.config.ConfiguraçãoFirebase;
+import com.android.piratex.config.ConfiguracaoFirebase;
 import com.android.piratex.helper.UsuarioFirebase;
 import com.android.piratex.model.Destino;
 import com.android.piratex.model.Requisicao;
@@ -24,7 +24,6 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -293,8 +292,8 @@ public class PassageiroActivity extends AppCompatActivity implements OnMapReadyC
         buttonChamarPiratex = findViewById(R.id.buttonChamarPiratex);
 
         //Configurações Iniciais
-        autenticacao = ConfiguraçãoFirebase.getFirebaseAutenticacao();
-        firebaseRef = ConfiguraçãoFirebase.getFirebaseDatabase();
+        autenticacao = ConfiguracaoFirebase.getFirebaseAutenticacao();
+        firebaseRef = ConfiguracaoFirebase.getFirebaseDatabase();
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()

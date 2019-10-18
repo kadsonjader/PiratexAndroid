@@ -1,6 +1,6 @@
 package com.android.piratex.model;
 
-import com.android.piratex.config.ConfiguraçãoFirebase;
+import com.android.piratex.config.ConfiguracaoFirebase;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.Exclude;
 
@@ -22,7 +22,7 @@ public class Usuario implements Serializable {
     }
 
     public void salvar(){
-        DatabaseReference databaseref = ConfiguraçãoFirebase.getFirebaseDatabase();
+        DatabaseReference databaseref = ConfiguracaoFirebase.getFirebaseDatabase();
         DatabaseReference usuarios = databaseref.child("usuarios").child(getId());
 
         usuarios.setValue(this);
