@@ -1,4 +1,4 @@
-#Thu Oct 17 23:47:05 BRT 2019
+#Fri Oct 18 08:21:23 BRT 2019
 base.0=E\:\\Piratex\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out
 path.0=classes.dex
 renamed.0=classes.dex

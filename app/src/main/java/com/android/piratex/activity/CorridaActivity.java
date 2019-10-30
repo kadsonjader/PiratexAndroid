@@ -8,17 +8,12 @@ import android.graphics.Color;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
-import android.os.Build;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.android.piratex.R;
-import com.android.piratex.config.ConfiguracaoFirebase;
-import com.android.piratex.helper.UsuarioFirebase;
-import com.android.piratex.model.Requisicao;
-import com.android.piratex.model.Usuario;
 import com.firebase.geofire.GeoFire;
 import com.firebase.geofire.GeoLocation;
 import com.firebase.geofire.GeoQuery;
@@ -34,10 +29,16 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.ValueEventListener;
+import com.android.piratex.R;
+import com.android.piratex.config.ConfiguracaoFirebase;
+import com.android.piratex.helper.UsuarioFirebase;
+import com.android.piratex.model.Requisicao;
+import com.android.piratex.model.Usuario;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
@@ -49,6 +50,7 @@ public class CorridaActivity extends AppCompatActivity
 
     //componente
     private Button buttonAceitarCorrida;
+    private FloatingActionButton fabRota;
 
     private GoogleMap mMap;
     private LocationManager locationManager;
@@ -134,6 +136,7 @@ public class CorridaActivity extends AppCompatActivity
     }
 
     private void requisicaoAguardando(){
+
         buttonAceitarCorrida.setText("Aceitar corrida");
 
         //Exibe marcador do motorista
@@ -146,7 +149,9 @@ public class CorridaActivity extends AppCompatActivity
     }
 
     private void requisicaoACaminho(){
+
         buttonAceitarCorrida.setText("A caminho do passageiro");
+        fabRota.setVisibility(View.VISIBLE);
 
         //Exibe marcador do motorista
         adicionaMarcadorMotorista(localMotorista, motorista.getNome() );
@@ -367,6 +372,42 @@ public class CorridaActivity extends AppCompatActivity
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
+        //Adiciona evento de clique no FabRota
+        fabRota = findViewById(R.id.fabRota);
+        fabRota.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                String status = statusRequisicao;
+                if( status != null && !status.isEmpty() ){
+
+                    String lat = "";
+                    String lon = "";
+
+                    switch ( status ){
+                        case Requisicao.STATUS_A_CAMINHO :
+                            lat = String.valueOf(localPassageiro.latitude);
+                            lon = String.valueOf(localPassageiro.longitude);
+                            break;
+                        case Requisicao.STATUS_VIAGEM :
+
+                            break;
+                    }
+
+                    //Abrir rota
+                    String latLong = lat + "," + lon;
+                    Uri uri = Uri.parse("google.navigation:q="+latLong+"&mode=d");
+                    Intent i = new Intent(Intent.ACTION_VIEW, uri);
+                    i.setPackage("com.google.android.apps.maps");
+                    startActivity(i);
+
+                }
+
+            }
+        });
+
+
     }
 
     @Override

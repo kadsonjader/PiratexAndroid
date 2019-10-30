@@ -528,6 +528,10 @@
         "source": "C:\\Users\\kadso\\.gradle\\caches\\transforms-2\\files-2.1\\507a2d319ae232a4c602064e7894d411\\res\\drawable-xxhdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png"
     },
     {
+        "merged": "E:\\Piratex\\app\\build\\intermediates\\res\\merged\\debug\\drawable_destino.png.flat",
+        "source": "E:\\Piratex\\app\\src\\main\\res\\drawable\\destino.png"
+    },
+    {
         "merged": "E:\\Piratex\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-xhdpi-v17_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
         "source": "C:\\Users\\kadso\\.gradle\\caches\\transforms-2\\files-2.1\\507a2d319ae232a4c602064e7894d411\\res\\drawable-ldrtl-xhdpi-v17\\abc_ic_menu_copy_mtrl_am_alpha.png"
     },
@@ -1746,6 +1750,10 @@
     {
         "merged": "E:\\Piratex\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_design_ic_visibility_off.xml.flat",
         "source": "C:\\Users\\kadso\\.gradle\\caches\\transforms-2\\files-2.1\\c2733f22172056013edd0071213c8457\\res\\drawable-anydpi-v21\\design_ic_visibility_off.xml"
+    },
+    {
+        "merged": "E:\\Piratex\\app\\build\\intermediates\\res\\merged\\debug\\drawable_rota.png.flat",
+        "source": "E:\\Piratex\\app\\src\\main\\res\\drawable\\rota.png"
     },
     {
         "merged": "E:\\Piratex\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_select_dialog_material.xml.flat",

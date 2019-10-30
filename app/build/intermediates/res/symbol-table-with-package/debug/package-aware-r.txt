@@ -1065,6 +1065,7 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable destino
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable ic_launcher_background
@@ -1089,6 +1090,7 @@ drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable piratexicon
 drawable piratexlogo
+drawable rota
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable usuario
@@ -1176,6 +1178,7 @@ id enterAlwaysCollapsed
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
+id fabRota
 id fill
 id fill_horizontal
 id fill_vertical
