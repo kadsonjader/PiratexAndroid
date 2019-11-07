@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\Piratex\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-pt-rPT\\values-pt-rPT.xml",
+            "outputFile": "E:\\Piratex\\PiratexAndroid\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-pt-rPT\\values-pt-rPT.xml",
             "map": [
                 {
                     "source": "C:\\Users\\kadso\\.gradle\\caches\\transforms-2\\files-2.1\\276ddaff936d38754bb32a5b8b746faf\\res\\values-pt-rPT\\values.xml",

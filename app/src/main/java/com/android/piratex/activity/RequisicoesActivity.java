@@ -33,6 +33,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -87,7 +89,9 @@ public class RequisicoesActivity extends AppCompatActivity {
                     Requisicao requisicao = ds.getValue( Requisicao.class );
 
                     if( requisicao.getStatus().equals(Requisicao.STATUS_A_CAMINHO)
-                            || requisicao.getStatus().equals(Requisicao.STATUS_VIAGEM)){
+                            || requisicao.getStatus().equals(Requisicao.STATUS_VIAGEM)
+                            || requisicao.getStatus().equals(Requisicao.STATUS_FINALIZADA)){
+                        motorista = requisicao.getMotorista();
                         abrirTelaCorrida(requisicao.getId(), motorista, true);
                     }
 
@@ -114,9 +118,17 @@ public class RequisicoesActivity extends AppCompatActivity {
                 String latitude = String.valueOf(location.getLatitude());
                 String longitude = String.valueOf(location.getLongitude());
 
+                //Atualizar GeoFire
+                UsuarioFirebase.atualizarDadosLocalizacao(
+                        location.getLatitude(),
+                        location.getLongitude()
+                );
+
                 if( !latitude.isEmpty() && !longitude.isEmpty() ){
                     motorista.setLatitude(latitude);
                     motorista.setLongitude(longitude);
+
+                    adicionaEventoCliqueRecyclerView();
                     locationManager.removeUpdates(locationListener);
                     adapter.notifyDataSetChanged();
                 }
@@ -199,6 +211,12 @@ public class RequisicoesActivity extends AppCompatActivity {
         recyclerRequisicoes.setHasFixedSize(true);
         recyclerRequisicoes.setAdapter( adapter );
 
+        recuperarRequisicoes();
+
+    }
+
+    private void adicionaEventoCliqueRecyclerView(){
+
         //Adiciona evento de clique no recycler
         recyclerRequisicoes.addOnItemTouchListener(
                 new RecyclerItemClickListener(
@@ -223,8 +241,6 @@ public class RequisicoesActivity extends AppCompatActivity {
                         }
                 )
         );
-
-        recuperarRequisicoes();
 
     }
 

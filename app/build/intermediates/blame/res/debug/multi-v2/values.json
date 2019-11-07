@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\Piratex\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+            "outputFile": "E:\\Piratex\\PiratexAndroid\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
             "map": [
                 {
                     "source": "C:\\Users\\kadso\\.gradle\\caches\\transforms-2\\files-2.1\\bea28818df73cc9d82210e3b544f6bf2\\res\\values\\values.xml",
@@ -20,23 +20,6 @@
                         "endLines": "246,247,346,347,348,349,350,351,352,461,462,463,464,465,466,467,468,469,470,471,472,473,474,475,484,485,493,494,506,507,508,509,510,514,537,619,2322,2326,2327,2331,2332,2694,2695,3767,3967,3999,4037,4044",
                         "endColumns": "68,62,69,67,71,69,60,73,72,60,60,61,63,61,60,67,99,59,65,72,68,56,51,61,71,75,34,34,49,60,56,33,34,34,69,70,116,12,109,12,128,71,66,24,24,24,24,24",
                         "endOffsets": "13609,13672,20435,20503,20575,20645,20706,20780,20853,27780,27841,27903,27967,28029,28090,28158,28258,28318,28384,28457,28526,28583,28635,28697,29222,29298,29678,29713,30303,30364,30421,30455,30490,30668,32017,40093,153723,153924,154034,154235,154364,178642,178709,240199,258447,260512,262474,262851"
-                    }
-                },
-                {
-                    "source": "E:\\Piratex\\app\\src\\main\\res\\values\\strings.xml",
-                    "from": {
-                        "startLines": "1,6,2,5,3,4",
-                        "startColumns": "4,4,4,4,4,4",
-                        "startOffsets": "16,309,61,236,113,176",
-                        "endColumns": "44,66,51,72,62,59",
-                        "endOffsets": "56,371,108,304,171,231"
-                    },
-                    "to": {
-                        "startLines": "577,620,621,622,623,624",
-                        "startColumns": "4,4,4,4,4,4",
-                        "startOffsets": "34780,40098,40165,40217,40290,40353",
-                        "endColumns": "44,66,51,72,62,59",
-                        "endOffsets": "34820,40160,40212,40285,40348,40408"
                     }
                 },
                 {
@@ -78,23 +61,6 @@
                     }
                 },
                 {
-                    "source": "E:\\Piratex\\app\\src\\debug\\res\\values\\google_maps_api.xml",
-                    "from": {
-                        "startLines": "22",
-                        "startColumns": "4",
-                        "startOffsets": "887",
-                        "endColumns": "137",
-                        "endOffsets": "1020"
-                    },
-                    "to": {
-                        "startLines": "608",
-                        "startColumns": "4",
-                        "startOffsets": "38613",
-                        "endColumns": "137",
-                        "endOffsets": "38746"
-                    }
-                },
-                {
                     "source": "C:\\Users\\kadso\\.gradle\\caches\\transforms-2\\files-2.1\\b6cdf113d75a96a0231f0601b8d6867f\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11",
@@ -112,22 +78,20 @@
                     }
                 },
                 {
-                    "source": "E:\\Piratex\\app\\src\\main\\res\\values\\styles.xml",
+                    "source": "E:\\Piratex\\PiratexAndroid\\app\\src\\main\\res\\values\\dimens.xml",
                     "from": {
-                        "startLines": "3,21,16,23,10",
-                        "startColumns": "4,4,4,4,4",
-                        "startOffsets": "54,769,618,861,335",
-                        "endLines": "8,21,19,23,14",
-                        "endColumns": "12,90,12,80,12",
-                        "endOffsets": "329,855,763,937,612"
+                        "startLines": "1",
+                        "startColumns": "4",
+                        "startOffsets": "16",
+                        "endColumns": "41",
+                        "endOffsets": "53"
                     },
                     "to": {
-                        "startLines": "634,640,641,645,2973",
-                        "startColumns": "4,4,4,4,4",
-                        "startOffsets": "41132,41412,41502,41652,195543",
-                        "endLines": "639,640,644,645,2977",
-                        "endColumns": "12,89,12,79,12",
-                        "endOffsets": "41407,41497,41647,41727,195820"
+                        "startLines": "399",
+                        "startColumns": "4",
+                        "startOffsets": "23835",
+                        "endColumns": "41",
+                        "endOffsets": "23872"
                     }
                 },
                 {
@@ -147,6 +111,40 @@
                         "endLines": "2,10,16,21,22,23,29,34,35,36,39,40,43,46,47,48,49,50,53,56,57,58,59,64,67,70,71,72,77,78,79,82,85,86,89,92,95,98,99,102,105,106,111,112,117,120,123,124,125,126,127,128,129,130,131,132,141,3794,3795,3796,4045",
                         "endColumns": "60,11,47,51,60,45,11,60,59,69,11,67,11,11,61,64,67,66,11,11,66,64,64,11,11,11,65,66,11,68,65,11,11,66,11,11,11,11,64,11,11,64,11,66,11,11,11,64,61,61,61,58,59,60,60,58,11,2575,131,3263,107",
                         "endOffsets": "206,497,829,1089,1150,1196,1439,1692,1752,1822,1955,2023,2152,2278,2340,2405,2473,2540,2663,2788,2855,2920,2985,3166,3287,3408,3474,3541,3751,3820,3886,4011,4137,4204,4330,4457,4582,4709,4774,4900,5023,5088,5296,5363,5543,5663,5783,5848,5910,5972,6034,6093,6153,6214,6275,6334,6709,244167,244299,247563,262959"
+                    }
+                },
+                {
+                    "source": "E:\\Piratex\\PiratexAndroid\\app\\src\\main\\res\\values\\colors.xml",
+                    "from": {
+                        "startLines": "6,5,4,2,3",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "242,199,153,55,102",
+                        "endColumns": "45,42,45,46,50",
+                        "endOffsets": "283,237,194,97,148"
+                    },
+                    "to": {
+                        "startLines": "186,187,194,195,196",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "9609,9655,10062,10108,10155",
+                        "endColumns": "45,42,45,46,50",
+                        "endOffsets": "9650,9693,10103,10150,10201"
+                    }
+                },
+                {
+                    "source": "E:\\Piratex\\PiratexAndroid\\app\\src\\debug\\res\\values\\google_maps_api.xml",
+                    "from": {
+                        "startLines": "22",
+                        "startColumns": "4",
+                        "startOffsets": "887",
+                        "endColumns": "137",
+                        "endOffsets": "1020"
+                    },
+                    "to": {
+                        "startLines": "608",
+                        "startColumns": "4",
+                        "startOffsets": "38613",
+                        "endColumns": "137",
+                        "endOffsets": "38746"
                     }
                 },
                 {
@@ -224,23 +222,6 @@
                     }
                 },
                 {
-                    "source": "E:\\Piratex\\app\\src\\main\\res\\values\\colors.xml",
-                    "from": {
-                        "startLines": "6,5,4,2,3",
-                        "startColumns": "4,4,4,4,4",
-                        "startOffsets": "242,199,153,55,102",
-                        "endColumns": "45,42,45,46,50",
-                        "endOffsets": "283,237,194,97,148"
-                    },
-                    "to": {
-                        "startLines": "186,187,194,195,196",
-                        "startColumns": "4,4,4,4,4",
-                        "startOffsets": "9609,9655,10062,10108,10155",
-                        "endColumns": "45,42,45,46,50",
-                        "endOffsets": "9650,9693,10103,10150,10201"
-                    }
-                },
-                {
                     "source": "C:\\Users\\kadso\\.gradle\\caches\\transforms-2\\files-2.1\\527993e0c62f126062a924f3d48a541a\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,102,3,13",
@@ -257,6 +238,23 @@
                         "endLines": "24,2972,3806,3895",
                         "endColumns": "60,12,24,24",
                         "endOffsets": "1257,195538,248171,253382"
+                    }
+                },
+                {
+                    "source": "E:\\Piratex\\PiratexAndroid\\app\\src\\main\\res\\values\\strings.xml",
+                    "from": {
+                        "startLines": "1,6,2,5,3,4",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "16,309,61,236,113,176",
+                        "endColumns": "44,66,51,72,62,59",
+                        "endOffsets": "56,371,108,304,171,231"
+                    },
+                    "to": {
+                        "startLines": "577,620,621,622,623,624",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "34780,40098,40165,40217,40290,40353",
+                        "endColumns": "44,66,51,72,62,59",
+                        "endOffsets": "34820,40160,40212,40285,40348,40408"
                     }
                 },
                 {
@@ -279,24 +277,26 @@
                     }
                 },
                 {
-                    "source": "E:\\Piratex\\app\\src\\main\\res\\values\\dimens.xml",
+                    "source": "E:\\Piratex\\PiratexAndroid\\app\\src\\main\\res\\values\\styles.xml",
                     "from": {
-                        "startLines": "1",
-                        "startColumns": "4",
-                        "startOffsets": "16",
-                        "endColumns": "41",
-                        "endOffsets": "53"
+                        "startLines": "3,21,16,23,10",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "54,769,618,861,335",
+                        "endLines": "8,21,19,23,14",
+                        "endColumns": "12,90,12,80,12",
+                        "endOffsets": "329,855,763,937,612"
                     },
                     "to": {
-                        "startLines": "399",
-                        "startColumns": "4",
-                        "startOffsets": "23835",
-                        "endColumns": "41",
-                        "endOffsets": "23872"
+                        "startLines": "634,640,641,645,2973",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "41132,41412,41502,41652,195543",
+                        "endLines": "639,640,644,645,2977",
+                        "endColumns": "12,89,12,79,12",
+                        "endOffsets": "41407,41497,41647,41727,195820"
                     }
                 },
                 {
-                    "source": "E:\\Piratex\\app\\build\\generated\\res\\google-services\\debug\\values\\values.xml",
+                    "source": "E:\\Piratex\\PiratexAndroid\\app\\build\\generated\\res\\google-services\\debug\\values\\values.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
