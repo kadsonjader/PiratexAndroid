@@ -81,7 +81,7 @@ public class PassageiroActivity extends AppCompatActivity
     private LocationManager locationManager;
     private LocationListener locationListener;
     private LatLng localPassageiro;
-    private boolean uberChamado = false;
+    private boolean cancelarUber = false;
     private DatabaseReference firebaseRef;
     private Requisicao requisicao;
     private Usuario passageiro;
@@ -161,6 +161,7 @@ public class PassageiroActivity extends AppCompatActivity
     private void alteraInterfaceStatusRequisicao(String status){
 
         if(status != null && !status.isEmpty()) {
+            cancelarUber = false;
             switch (status) {
                 case Requisicao.STATUS_AGUARDANDO:
                     requisicaoAguardando();
@@ -174,6 +175,9 @@ public class PassageiroActivity extends AppCompatActivity
                 case Requisicao.STATUS_FINALIZADA:
                     requisicaoFinalizada();
                     break;
+                case Requisicao.STATUS_CANCELADA:
+                    requisicaoCancelada();
+                    break;
 
             }
         }else {
@@ -184,11 +188,19 @@ public class PassageiroActivity extends AppCompatActivity
 
     }
 
+    private void requisicaoCancelada(){
+
+        linearLayoutDestino.setVisibility( View.VISIBLE );
+        buttonChamarUber.setText("Chamar Piratex");
+        cancelarUber = false;
+
+    }
+
     private void requisicaoAguardando(){
 
         linearLayoutDestino.setVisibility( View.GONE );
-        buttonChamarUber.setText("Cancelar Uber");
-        uberChamado = true;
+        buttonChamarUber.setText("Cancelar Piratex");
+        cancelarUber = true;
 
         //Adiciona marcador passageiro
         adicionaMarcadorPassageiro(localPassageiro, passageiro.getNome());
@@ -200,7 +212,7 @@ public class PassageiroActivity extends AppCompatActivity
 
         linearLayoutDestino.setVisibility( View.GONE );
         buttonChamarUber.setText("Motorista a caminho");
-        uberChamado = true;
+        buttonChamarUber.setEnabled(false);
 
         //Adiciona marcador passageiro
         adicionaMarcadorPassageiro(localPassageiro, passageiro.getNome());
@@ -217,6 +229,7 @@ public class PassageiroActivity extends AppCompatActivity
 
         linearLayoutDestino.setVisibility( View.GONE );
         buttonChamarUber.setText("A caminho do destino");
+        buttonChamarUber.setEnabled(false);
 
         //Adiciona marcador motorista
         adicionaMarcadorMotorista(localMotorista, motorista.getNome());
@@ -236,6 +249,7 @@ public class PassageiroActivity extends AppCompatActivity
     private void requisicaoFinalizada(){
 
         linearLayoutDestino.setVisibility( View.GONE );
+        buttonChamarUber.setEnabled(false);
 
         //Adiciona marcador de destino
         LatLng localDestino = new LatLng(
@@ -364,7 +378,15 @@ public class PassageiroActivity extends AppCompatActivity
 
     public void chamarPiratex(View view){
 
-        if( !uberChamado ){//Uber não foi chamado
+        //false -> uber não pode ser cancelado ainda
+        //true -> uber pode ser cancelado
+        if( cancelarUber ){//Uber pode ser cancelado
+
+            //Cancelar a requisição
+            requisicao.setStatus(Requisicao.STATUS_CANCELADA);
+            requisicao.atualizarStatus();
+
+        }else {
 
             String enderecoDestino = editDestino.getText().toString();
 
@@ -398,7 +420,6 @@ public class PassageiroActivity extends AppCompatActivity
 
                                     //salvar requisição
                                     salvarRequisicao( destino );
-                                    uberChamado = true;
 
                                 }
                             }).setNegativeButton("cancelar", new DialogInterface.OnClickListener() {
@@ -418,10 +439,6 @@ public class PassageiroActivity extends AppCompatActivity
                         Toast.LENGTH_SHORT).show();
             }
 
-        }else {
-            //Cancelar a requisição
-
-            uberChamado = false;
         }
 
     }
@@ -440,7 +457,7 @@ public class PassageiroActivity extends AppCompatActivity
         requisicao.salvar();
 
         linearLayoutDestino.setVisibility( View.GONE );
-        buttonChamarUber.setText("Cancelar Uber");
+        buttonChamarUber.setText("Cancelar Piratex");
 
     }
 

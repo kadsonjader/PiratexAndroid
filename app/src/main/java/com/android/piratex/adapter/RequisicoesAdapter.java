@@ -42,7 +42,7 @@ public class RequisicoesAdapter extends RecyclerView.Adapter<RequisicoesAdapter.
 
         holder.nome.setText(passageiro.getNome());
 
-        if(motorista != null){
+        if((motorista.getLatitude()) != null && (motorista.getLongitude() != null)){
             LatLng localPassageiro = new LatLng(
                     Double.parseDouble(passageiro.getLatitude()),
                     Double.parseDouble(passageiro.getLongitude())
@@ -56,6 +56,8 @@ public class RequisicoesAdapter extends RecyclerView.Adapter<RequisicoesAdapter.
             float distancia = Local.calcularDistancia(localPassageiro,localMotorista);
             String distanciaFormatada = Local.formatarDistancia(distancia);
             holder.distancia.setText(distanciaFormatada + " - aproximadamente");
+        }else {
+            holder.distancia.setText("Recebendo localização do motorista!");
         }
 
     }

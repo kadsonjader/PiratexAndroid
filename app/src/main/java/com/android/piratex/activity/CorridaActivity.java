@@ -145,11 +145,23 @@ public class CorridaActivity extends AppCompatActivity
             case Requisicao.STATUS_FINALIZADA :
                 requisicaoFinalizada();
                 break;
+            case Requisicao.STATUS_CANCELADA :
+                requisicaoCancelada();
+                break;
         }
 
     }
 
-    @SuppressLint("RestrictedApi")
+    private void requisicaoCancelada(){
+
+        Toast.makeText(this,
+                "Requisição foi cancelada pelo passageiro!",
+                Toast.LENGTH_SHORT).show();
+
+        startActivity(new Intent(CorridaActivity.this, RequisicoesActivity.class));
+
+    }
+
     private void requisicaoFinalizada(){
 
         fabRota.setVisibility(View.GONE);
@@ -195,7 +207,6 @@ public class CorridaActivity extends AppCompatActivity
 
     }
 
-    @SuppressLint("RestrictedApi")
     private void requisicaoACaminho(){
 
         buttonAceitarCorrida.setText("A caminho do passageiro");
