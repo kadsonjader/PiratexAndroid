@@ -195,6 +195,7 @@ public class CorridaActivity extends AppCompatActivity
 
     }
 
+    @SuppressLint("RestrictedApi")
     private void requisicaoACaminho(){
 
         buttonAceitarCorrida.setText("A caminho do passageiro");
@@ -215,6 +216,7 @@ public class CorridaActivity extends AppCompatActivity
     }
 
 
+    @SuppressLint("RestrictedApi")
     private void requisicaoViagem(){
 
         //Altera interface
@@ -516,6 +518,13 @@ public class CorridaActivity extends AppCompatActivity
             Intent i = new Intent(CorridaActivity.this, RequisicoesActivity.class);
             startActivity(i);
         }
+
+        //Verificar o status da requisição para encerrar
+        if( statusRequisicao != null && !statusRequisicao.isEmpty() ){
+            requisicao.setStatus(Requisicao.STATUS_ENCERRADA);
+            requisicao.atualizarStatus();
+        }
+
         return false;
     }
 }
