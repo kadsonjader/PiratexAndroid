@@ -1,6 +1,7 @@
 package com.android.piratex.activity;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -14,7 +15,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.android.piratex.R;
+import com.android.piratex.config.ConfiguracaoFirebase;
+import com.android.piratex.helper.Local;
+import com.android.piratex.helper.UsuarioFirebase;
 import com.android.piratex.model.Destino;
+import com.android.piratex.model.Requisicao;
+import com.android.piratex.model.Usuario;
 import com.firebase.geofire.GeoFire;
 import com.firebase.geofire.GeoLocation;
 import com.firebase.geofire.GeoQuery;
@@ -35,13 +42,10 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.ValueEventListener;
-import com.android.piratex.R;
-import com.android.piratex.config.ConfiguracaoFirebase;
-import com.android.piratex.helper.UsuarioFirebase;
-import com.android.piratex.model.Requisicao;
-import com.android.piratex.model.Usuario;
 
-import androidx.annotation.RequiresApi;
+
+import java.text.DecimalFormat;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
@@ -145,9 +149,11 @@ public class CorridaActivity extends AppCompatActivity
 
     }
 
+    @SuppressLint("RestrictedApi")
     private void requisicaoFinalizada(){
 
         fabRota.setVisibility(View.GONE);
+        requisicaoAtiva = false;
 
         if( marcadorMotorista != null )
             marcadorMotorista.remove();
@@ -163,9 +169,13 @@ public class CorridaActivity extends AppCompatActivity
         adicionaMarcadorDestino(localDestino, "Destino");
         centralizarMarcador(localDestino);
 
+        //Calcular distancia
+        float distancia = Local.calcularDistancia(localPassageiro, localDestino);
+        float valor = distancia * 8;//4.56
+        DecimalFormat decimal = new DecimalFormat("0.00");
+        String resultado = decimal.format(valor);
 
-
-        buttonAceitarCorrida.setText("Corrida finalizada - R$ 6,90");
+        buttonAceitarCorrida.setText("Corrida finalizada - R$ " + resultado );
 
     }
 
@@ -388,6 +398,12 @@ public class CorridaActivity extends AppCompatActivity
 
                 //Atualizar GeoFire
                 UsuarioFirebase.atualizarDadosLocalizacao(latitude, longitude);
+
+                //Atualizar localização motorista no Firebase
+                motorista.setLatitude(String.valueOf(latitude));
+                motorista.setLongitude(String.valueOf(longitude));
+                requisicao.setMotorista( motorista );
+                requisicao.atualizarLocalizacaoMotorista();
 
                 alteraInterfaceStatusRequisicao(statusRequisicao);
 

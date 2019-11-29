@@ -7,12 +7,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Requisicao {
+
     private String id;
     private String status;
     private Usuario passageiro;
     private Usuario motorista;
     private Destino destino;
-
 
     public static final String STATUS_AGUARDANDO = "aguardando";
     public static final String STATUS_A_CAMINHO = "acaminho";
@@ -22,15 +22,16 @@ public class Requisicao {
     public Requisicao() {
     }
 
-    public void salvar() {
+    public void salvar(){
 
         DatabaseReference firebaseRef = ConfiguracaoFirebase.getFirebaseDatabase();
         DatabaseReference requisicoes = firebaseRef.child("requisicoes");
 
         String idRequisicao = requisicoes.push().getKey();
-        setId(idRequisicao);
+        setId( idRequisicao );
 
-        requisicoes.child(getId()).setValue(this);
+        requisicoes.child( getId() ).setValue(this);
+
     }
 
     public void atualizar(){
@@ -61,6 +62,25 @@ public class Requisicao {
         requisicao.updateChildren( objeto );
 
     }
+
+    public void atualizarLocalizacaoMotorista(){
+
+        DatabaseReference firebaseRef = ConfiguracaoFirebase.getFirebaseDatabase();
+        DatabaseReference requisicoes = firebaseRef
+                .child("requisicoes");
+
+        DatabaseReference requisicao = requisicoes
+                .child(getId())
+                .child("motorista");
+
+        Map objeto = new HashMap();
+        objeto.put("latitude", getMotorista().getLatitude() );
+        objeto.put("longitude", getMotorista().getLongitude());
+
+        requisicao.updateChildren( objeto );
+
+    }
+
 
     public String getId() {
         return id;
