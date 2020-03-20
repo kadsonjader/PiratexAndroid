@@ -19,9 +19,6 @@ Java
 Android SDK
 Google maps API
 ```
-
-## Imagens
-
 ## Getting Started
 clone o repositorio e executa com algumas dessas IDE
 ```sh
