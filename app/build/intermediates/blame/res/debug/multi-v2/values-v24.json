@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/renanravelli/Documents/workspace/PiratexAndroid/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v24/values-v24.xml",
+            "outputFile": "/Users/kadsonjader/PiratexAndroid/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v24/values-v24.xml",
             "map": [
                 {
-                    "source": "/Users/renanravelli/.gradle/caches/transforms-2/files-2.1/373fcbfa9048945614e673be5ce3dc22/res/values-v24/values-v24.xml",
+                    "source": "/Users/kadsonjader/.gradle/caches/transforms-2/files-2.1/9de6fca193c5ec5a276253afac0ff602/res/values-v24/values-v24.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",

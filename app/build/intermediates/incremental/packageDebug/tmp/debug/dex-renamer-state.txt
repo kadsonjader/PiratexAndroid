@@ -1,4 +1,4 @@
-#Thu Nov 07 00:51:20 BRST 2019
-base.0=E\:\\Piratex\\PiratexAndroid\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out
+#Fri Mar 20 11:20:41 BRT 2020
+base.0=/Users/kadsonjader/PiratexAndroid/app/build/intermediates/dex/debug/mergeDexDebug/out
 path.0=classes.dex
 renamed.0=classes.dex

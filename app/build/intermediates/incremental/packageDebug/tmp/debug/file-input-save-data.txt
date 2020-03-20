@@ -1,7 +1,7 @@
 #Internal package file, do not edit.
-#Thu Nov 07 00:51:20 BRST 2019
+#Fri Mar 20 11:20:41 BRT 2020
 0.baseType=DIRECTORY
-0.base=E\:\\Piratex\\PiratexAndroid\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out
+0.base=/Users/kadsonjader/PiratexAndroid/app/build/intermediates/dex/debug/mergeDexDebug/out
 0.path=classes.dex
 0.set=DEX
 count=1
